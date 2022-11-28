@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Term Project: 4-Tier Web Page Generator</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <script src="function.js"></script>
+    <body>
+        <h1>4-Tier Web App Generator</h1>
+        <h2>Add elements to your page by clicking the buttons in the table below</h2>
+        <table border="2">
+            <tr>
+                <th>Element</th>
+                <th>Element Description</th>
+                <th>Drag and Drop?</th>
+                <th>Implement</th>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Background to Page</td>
+                <td class="specialRightBorder">Changes the background color of the page based on input.</td>
+                <td class="specialRightBorder">no</td>
+                <td class="specialBottomBorder"><button onclick="addBackground()">Add Background Color</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Title</td>
+                <td class="specialRightBorder">Adds a title with input text.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button onclick="addTitle()">Add Title To Page</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Text Box</td>
+                <td class="specialRightBorder">Adds a text box with inputted text.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button onclick="addTextBox()">Add Text Box</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Database Input Box</td>
+                <td class="specialRightBorder">Adds input box for database name.</td>
+                <td class="specialRightBorder">no</td>
+                <td class="specialBottomBorder"><button id = "databaseName" onclick="addDatabaseInput()">Database Input Box</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Display Database Button</td>
+                <td class="specialRightBorder">Button that displays the data base in a table format.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button id = "displayButton" onclick="addDisplayButton()">Add Display Button</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Add New Item Button</td>
+                <td class="specialRightBorder">Button that adds new item to database based off of input text boxes.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button id = "addButton" onclick="addNewItem()">Add New Item Button</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Update Item Button</td>
+                <td class="specialRightBorder">Button that update item in database based off of input text boxes.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button id = "updateButton" onclick="updateItem()">Update Item Button</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Delete Item Button</td>
+                <td class="specialRightBorder">Button that deletes item in database based off of input text boxes.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button id = "deleteButton" onclick="deleteItem()">Delete Item Button</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Input Item Form</td>
+                <td class="specialRightBorder">Two text boxes for inputting in data to table.</td>
+                <td class="specialRightBorder">no</td>
+                <td class="specialBottomBorder"><button id = "inputBoxes" onclick="inputBoxes()">Input Item Form</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Submit Form Button</td>
+                <td class="specialRightBorder">Button that submits information to be sent to server.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button id= "submitButton" onclick="submitButton()">Submit Button</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Reset Form Button</td>
+                <td class="specialRightBorder">Resets all fields in input form.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button id = "resetButton" onclick="resetButton()">Reset Button</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Reset Page</td>
+                <td class="specialRightBorder">Resets the page and its elements.</td>
+                <td class="specialRightBorder">no</td>
+                <td class="specialBottomBorder"><button onclick="resetWindow()">Reset Window</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Close Page</td>
+                <td class="specialRightBorder">Closes page created.</td>
+                <td class="specialRightBorder">no</td>
+                <td class="specialBottomBorder"><button onclick ="closeWindow()">Close Window</button></td>
+            </tr>
+        </table>
+        <div style="text-align: center;">
+            <button style="font-size: 18px; margin-top: 30px; width: 300px; height: 35px;" onclick="windowOpen()"><b>Open Window</b></button>
+        </div>
+    </body>
+</html>
