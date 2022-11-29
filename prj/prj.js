@@ -1,4 +1,4 @@
-var myPage = "<script src='dragDropFunction.js'></script> <body> <form name='contactPHP' method='post' action='http://localhost/isp/termProject/FourTierWebDesigner.php'>";
+var myPage = "<script src='dragDropFunction.js'></script> <body> <form name='contactPHP' method='post' action='http://localhost/isp/prj/prj.php'>";
 var newWindow = null;
 function windowOpen()
 {
@@ -15,6 +15,12 @@ function addBackground()
 {
     let userChoice = prompt("Enter color for background", "white");
     myPage += "<style> body{background-size: cover; background-color: " + userChoice + ";}</style>";
+}
+
+function addTextColor()
+{
+    let userChoice = prompt("Enter color for text", "black");
+    myPage += "<style> body{color: " + userChoice + ";}</style>";
 }
 
 function addTitle()
@@ -34,7 +40,13 @@ function addTextBox()
     {
         text = prompt("Enter a text (must not be blank or you will be asked to enter again).", "My Text");
     }
-    myPage += "<div style='height: auto; width:250; position: absolute; top: 50px; left: 50px; word-wrap: break-word;' onmousedown = 'grabber(event);'><p style='color: black;'>" + text + "</p></div>";
+    myPage += "<div style='height: auto; width:250; position: absolute; top: 50px; left: 50px; word-wrap: break-word;' onmousedown = 'grabber(event);'><p'>" + text + "</p></div>";
+}
+
+function addImage()
+{
+    url = prompt("Enter a image url.", "https://media.istockphoto.com/id/1197074302/photo/happy-puppy-dog-running-on-playground-green-yard.jpg?s=612x612&w=0&k=20&c=8iZ6gpBS7PEPqIUqWLqHUGes9kQ2S8JOvNJ0RQrr1Gw=");
+    myPage += "<div style='height: 250; width:250; position: absolute; top: 50px; left: 50px; ' onmousedown = 'grabber(event);'><image style='height: 250; width:250;' src='" + url + "'></image></div>";
 }
 
 function addDatabaseInput()
@@ -76,13 +88,13 @@ function inputBoxes()
 function submitButton()
 {
     document.getElementById("submitButton").disabled = true;
-    myPage += "<div style='position: absolute; top: 50px; left: 50px; margin: 20px;' onmousedown = 'grabber(event);'><input type = 'submit' value = 'Submit'/></div>"; 
+    myPage += "<div id = 'submitButtonDiv' style='border: black solid 3px; border-radius: 3px; position: absolute; top: 50px; left: 50px;' onmousedown = 'grabber(event);'><input id = 'submitButton' type = 'submit' value = 'Submit'/></div>"; 
 }
 
 function resetButton()
 {
     document.getElementById("resetButton").disabled = true;
-    myPage += "<div style='position: absolute; top: 50px; left: 50px;' onmousedown = 'grabber(event);'><input type = 'reset' value = 'Reset'/></div>"; 
+    myPage += "<div style='position: absolute; top: 50px; left: 50px; border: black solid 3px; border-radius: 3px;' onmousedown = 'grabber(event);'><input type = 'reset' value = 'Reset'/></div>"; 
 }
 
 function resetWindow()

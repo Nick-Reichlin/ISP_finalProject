@@ -17,7 +17,7 @@
             }
 
             $db = mysqli_connect('localhost:3306', 'root', '',"$databaseName");
-            
+
             if(isset($_POST['column1']))
             {
                 $column1 = $_POST['column1'];
@@ -60,7 +60,7 @@
             $rs = mysqli_query($db,$query);
             $rowCount = mysqli_num_rows($rs);
             print "<h2 style='text-align: center;'> Display of Data Catalog </h2>";
-            print "<table style='margin-left:40%; margin-right: 40%;'> <tr>";
+            print "<table style='margin-left:45%; margin-right: 45%; width: 10%;'> <tr>";
 
             $rows = mysqli_fetch_array($rs);
             $num_field = mysqli_num_fields($rs);
@@ -84,7 +84,6 @@
                 }
                 $rows = mysqli_fetch_array($rs);
             }
-            print '<form><input type="button" value="Return to previous page" onClick="javascript:history.go(-1)"></form>';
         ?>
     </body>
 </html>

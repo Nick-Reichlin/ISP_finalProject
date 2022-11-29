@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Term Project: 4-Tier Web Page Generator</title>
+        <title>Term Project: 4-Tier Web Page Studio</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
-    <script src="function.js"></script>
+    <script src="prj.js"></script>
     <body>
-        <h1>4-Tier Web App Generator</h1>
+        <h1>4-Tier Web App Studio</h1>
         <h2>Add elements to your page by clicking the buttons in the table below</h2>
         <table border="2">
             <tr>
@@ -22,6 +22,12 @@
                 <td class="specialBottomBorder"><button onclick="addBackground()">Add Background Color</button></td>
             </tr>
             <tr>
+                <td class="specialRightBorder">Text Color of Page</td>
+                <td class="specialRightBorder">Changes the text color of the page based on input.</td>
+                <td class="specialRightBorder">no</td>
+                <td class="specialBottomBorder"><button onclick="addTextColor()">Add Text Color</button></td>
+            </tr>
+            <tr>
                 <td class="specialRightBorder">Title</td>
                 <td class="specialRightBorder">Adds a title with input text.</td>
                 <td class="specialRightBorder">yes</td>
@@ -32,6 +38,12 @@
                 <td class="specialRightBorder">Adds a text box with inputted text.</td>
                 <td class="specialRightBorder">yes</td>
                 <td class="specialBottomBorder"><button onclick="addTextBox()">Add Text Box</button></td>
+            </tr>
+            <tr>
+                <td class="specialRightBorder">Add Image</td>
+                <td class="specialRightBorder">Adds a image with input url to image.</td>
+                <td class="specialRightBorder">yes</td>
+                <td class="specialBottomBorder"><button onclick="addImage()">Add Image</button></td>
             </tr>
             <tr>
                 <td class="specialRightBorder">Database Input Box</td>
@@ -71,13 +83,13 @@
             </tr>
             <tr>
                 <td class="specialRightBorder">Submit Form Button</td>
-                <td class="specialRightBorder">Button that submits information to be sent to server.</td>
+                <td class="specialRightBorder">Button that submits information to be sent to server. Drag with borders.</td>
                 <td class="specialRightBorder">yes</td>
                 <td class="specialBottomBorder"><button id= "submitButton" onclick="submitButton()">Submit Button</button></td>
             </tr>
             <tr>
                 <td class="specialRightBorder">Reset Form Button</td>
-                <td class="specialRightBorder">Resets all fields in input form.</td>
+                <td class="specialRightBorder">Resets all fields in input form. Drag with borders.</td>
                 <td class="specialRightBorder">yes</td>
                 <td class="specialBottomBorder"><button id = "resetButton" onclick="resetButton()">Reset Button</button></td>
             </tr>
@@ -96,6 +108,12 @@
         </table>
         <div style="text-align: center;">
             <button style="font-size: 18px; margin-top: 30px; width: 300px; height: 35px;" onclick="windowOpen()"><b>Open Window</b></button>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a style="font-size: 14px; color: #BBBBBB;" href="http://localhost/isp/prj/Helppage.html">Help Page</a>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <a style="font-size: 14px; color: #BBBBBB;" href="http://localhost/isp/prj/OnlineTechnicalDocument.pdf">Online Technical Document</a>
         </div>
     </body>
 </html>
