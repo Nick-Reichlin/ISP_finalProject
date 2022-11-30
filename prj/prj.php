@@ -26,6 +26,11 @@
             {
                 $column2 = $_POST['column2'];
             }
+
+            if(isset($_POST['column3']))
+            {
+                $column3 = $_POST['column3'];
+            }
             $action = $_POST['action'];
 
             if ($action == "display")
@@ -34,11 +39,11 @@
             }
             else if ($action == "add")
             {
-                $query = "insert into data values($column1, $column2)";
+                $query = "insert into data values($column1, $column2, $column3)";
             }
             else if ($action == "update")
             {
-                $query = "update data set column_2 = $column2 where column_1 = $column1"; 
+                $query = "update data set column_2 = $column2, column_3 = $column3 where column_1 = $column1"; 
             }
             else if ($action == "delete")
             {
@@ -60,7 +65,7 @@
             $rs = mysqli_query($db,$query);
             $rowCount = mysqli_num_rows($rs);
             print "<h2 style='text-align: center;'> Display of Data Catalog </h2>";
-            print "<table style='margin-left:45%; margin-right: 45%; width: 10%;'> <tr>";
+            print "<table style='margin-left:42.5%; margin-right: 42.5%; width: 15%;'> <tr>";
 
             $rows = mysqli_fetch_array($rs);
             $num_field = mysqli_num_fields($rs);

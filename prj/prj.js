@@ -52,7 +52,7 @@ function addImage()
 function addDatabaseInput()
 {
     document.getElementById("databaseName").disabled = true;
-    myPage += "<div style='width: 15%; margin-left:42.5%; margin-right:42.5%; margin-top: 250px;'><label>Input database name: </label><input type = 'text' id = 'database' placeholder='isp' name = 'database'/></div>";
+    myPage += "<div style='width: 15%; margin-left:42.5%; margin-right:42.5%; margin-top: 250px;'><label>Input database name: </label><input type = 'text' id = 'database' value='isp' name = 'database'/></div>";
 }
 
 function addDisplayButton()
@@ -82,7 +82,7 @@ function deleteItem()
 function inputBoxes()
 {
     document.getElementById("inputBoxes").disabled = true;
-    myPage += "<table style='width: 15%; margin-left:42.5%; margin-right:42.5%; margin-top: 20px;'><tr> <th>Column 1</th> <th>Column 2</th> </tr> <tr> <td><input type = 'text' id = 'column1' name = 'column1'/> </td> <td><input type = 'text' id = 'column2' name = 'column2'/></td></tr></table>"
+    myPage += "<table style='width: 20%; margin-left:40%; margin-right:40%; margin-top: 20px;'><tr> <th>Column 1</th> <th>Column 2</th> <th>Column 3</th> </tr> <tr> <td><input type = 'text' id = 'column1' name = 'column1'/> </td> <td><input type = 'text' id = 'column2' name = 'column2'/></td> <td><input type = 'text' id = 'column3' name = 'column3'/></td></tr></table>"
 }
 
 function submitButton()
@@ -107,7 +107,7 @@ function resetWindow()
     document.getElementById("inputBoxes").disabled = false;
     document.getElementById("submitButton").disabled = false;
     document.getElementById("resetButton").disabled = false;
-    myPage = "<script src='dragDropFunction.js'></script> <body> <form name='contactPHP' method='post' action='http://localhost/isp/termProject/FourTierWebDesigner.php'>";
+    myPage = "<script src='dragDropFunction.js'></script> <body> <form name='contactPHP' method='post' action='http://localhost/isp/prj/prj.php'>";
 }
 
 function closeWindow()
